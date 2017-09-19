@@ -75,9 +75,9 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     })
 
-    .state('list-inset', {
-      url: '/list-inset',
-          templateUrl: 'views/list-inset/list-inset.html',
+    .state('forget-password', {
+      url: '/forget-password',
+          templateUrl: 'views/forget-password/forget-password.html',
     })
 
     .state('login', {
