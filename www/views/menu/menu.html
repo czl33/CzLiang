@@ -17,30 +17,49 @@
       <h1 class="title">Left</h1>
     </ion-header-bar>-->
 
-    <ion-content>
+    <ion-content class="side-background">
       <div class="row">
-        <div class="col col-66">
-          <h5>小亮</h5>
-          <h7>13235915159</h7>
+        <div class="col col-66 name" >
+          <h5 style="color:yellow">小亮</h5>
+          <h6 style="color:yellow">13235915159</h6>
         </div>
         <div class="col col-33 col-center text-right">
-          <span class="calm-bg light">&nbsp;超级vip&nbsp;</span>
+          <span class="calm-bg light vrsion-yuan ">&nbsp;超级vip&nbsp;</span>
         </div>
       </div>
-      <ion-list>
-        <ion-item menu-close ng-click="login()">
-          Login
-        </ion-item>
-        <ion-item menu-close href="#/app/search">
-          Search
-        </ion-item>
-        <ion-item menu-close href="#/app/browse">
-          Browse
-        </ion-item>
-        <ion-item menu-close href="#/app/playlists">
-          Playlists
-        </ion-item>
-      </ion-list>
+
+     <ul class="list side-menu">
+       <li class="item item-icon-left item-icon-right" menu-close>
+         <i class="icon  ion-closed-captioning"></i>
+         资金
+         <i class="icon ion-chevron-right icon-accessory"></i>
+       </li>
+
+       <li class="item item-icon-left item-icon-right" menu-close>
+         <i class="icon  ion-briefcase"></i>
+         工具箱
+         <i class="icon ion-chevron-right icon-accessory"></i>
+       </li>
+
+       <li class="item item-icon-left item-icon-right" menu-close>
+         <i class="icon  ion-podium"></i>
+         排行榜
+         <i class="icon ion-chevron-right icon-accessory"></i>
+       </li>
+
+       <li class="item item-icon-left item-icon-right" menu-close>
+         <i class="icon ion-ribbon-b"></i>
+         勋章
+         <i class="icon ion-chevron-right icon-accessory"></i>
+       </li>
+
+     </ul>
+
+
+
     </ion-content>
+    <div style="position: fixed;bottom:10px;left:10px;z-index:9999;">
+      <a class="button button-light button-clear icon-left ion-android-settings" href="">设置</a>
+    </div>
   </ion-side-menu>
 </ion-side-menus>

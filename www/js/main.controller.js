@@ -12,7 +12,7 @@
         $state.go('welcome');
       }
       else{
-        $state.go('app.playlists');
+        $state.go('app.home');
       }
     }]);
 })();

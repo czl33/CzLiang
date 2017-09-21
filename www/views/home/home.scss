@@ -1,13 +1,25 @@
-.col-border{
-  border:1px solid #ccc;
-}
+
 .tubiao{
   height: 25vw;
-  margin-left:-1px ;
   display: flex;
   align-items: center;
-  margin-top: -1px;
+  border:1px solid #ececec;
+}
+.tubiao + .tubiao{
+  margin-left: -1px;
 }
 .shortcut{
   height:auto;
+}
+.quick-actions{
+  margin-left: 1px;
+}
+.quick-actions + .quick-actions{
+  margin-top: -1px;
+}
+.income{
+  font-size: 18px;
+}
+.yuan{
+  font-size: 10px;
 }

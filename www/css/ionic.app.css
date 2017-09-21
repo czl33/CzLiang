@@ -9815,15 +9815,44 @@ a.button {
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
 
-.col-border {
-  border: 1px solid #ccc; }
-
 .tubiao {
   height: 25vw;
-  margin-left: -1px;
   display: flex;
   align-items: center;
-  margin-top: -1px; }
+  border: 1px solid #ececec; }
+
+.tubiao + .tubiao {
+  margin-left: -1px; }
 
 .shortcut {
   height: auto; }
+
+.quick-actions {
+  margin-left: 1px; }
+
+.quick-actions + .quick-actions {
+  margin-top: -1px; }
+
+.income {
+  font-size: 18px; }
+
+.yuan {
+  font-size: 10px; }
+
+.side-background {
+  background-color: #333333; }
+
+.side-menu {
+  margin-left: 20px; }
+
+.side-menu .item {
+  border-left: none;
+  background-color: #333333;
+  color: #828282;
+  border-color: #4e4e4e; }
+
+.vrsion-yuan {
+  border-radius: 10%; }
+
+.name {
+  padding-left: 20px; }
