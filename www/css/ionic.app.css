@@ -9856,3 +9856,11 @@ a.button {
 
 .name {
   padding-left: 20px; }
+
+.category-content-left {
+  width: 40%;
+  float: left; }
+
+.category-content-right, .category-content-right-footer {
+  width: 60%;
+  margin-left: 40%; }

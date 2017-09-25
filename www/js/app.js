@@ -85,6 +85,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
           templateUrl: 'views/login/login.html',
           controller: 'LoginCtrl'
     })
+    .state('app.category-list', {
+      url: '/category-list',
+      views:{
+        'menuContent':{
+          templateUrl: 'views/category-list/category-list.html',
+          controller: 'CategoryListCtrl'
+        }
+      }
+      
+    })
   .state('app.single', {
     url: '/playlists/:playlistId',
     views: {
