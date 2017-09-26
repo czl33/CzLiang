@@ -93,7 +93,17 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
           controller: 'CategoryListCtrl'
         }
       }
-      
+
+    })
+    .state('app.category-add', {
+      url: '/category-add/:id/:name',
+      views:{
+        'menuContent':{
+          templateUrl: 'views/category-list/category-add.html',
+          controller: 'CategoryAddCtrl'
+        }
+      }
+
     })
   .state('app.single', {
     url: '/playlists/:playlistId',
