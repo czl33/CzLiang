@@ -105,6 +105,37 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
 
     })
+
+    .state('app.setting', {
+      url: '/setting',
+      views:{
+        'menuContent':{
+          templateUrl: 'views/setting/setting.html',
+          controller: 'SettingCtrl'
+        }
+      }
+    })
+    .state('app.shop', {
+      url: '/shop',
+      views:{
+        'menuContent':{
+          templateUrl: 'views/shop/shop.html',
+          controller: 'ShopCtrl'
+        }
+      }
+    })
+
+    .state('app.shop-edit', {
+      url: '/shop-edit',
+      params:{title:'',property:''},
+      views:{
+        'menuContent':{
+          templateUrl: 'views/shop/shop-edit.html',
+          controller: 'ShopEditCtrl'
+        }
+      }
+    })
+
   .state('app.single', {
     url: '/playlists/:playlistId',
     views: {
