@@ -9,7 +9,7 @@
       $scope.$on('$ionicView.beforeEnter',function (){
         var user=localStorageService.get('user');
         if(user.isLogin==false){
-          $state('login')
+          $state.go('login')
         }
       });
     }])

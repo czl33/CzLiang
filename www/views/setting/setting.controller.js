@@ -3,7 +3,7 @@
  */
 (function () {
   'use strict';
-  angular.module('starter.controllers').controller('SettingCtrl',['$scope','$ionicHistory','$state','$ionicPopup',function($scope,$ionicHistory,$state,$ionicPopup) {
+  angular.module('starter.controllers').controller('SettingCtrl',['$scope','$ionicHistory','$state','$ionicPopup','localStorageService',function($scope,$ionicHistory,$state,$ionicPopup,localStorageService) {
     $scope.goBack=function () {
       $ionicHistory.nextViewOptions(
         {
@@ -11,7 +11,16 @@
         }
       );
       $state.go('app.home')
+    };
+    $scope.shop= localStorageService.get('Shop',{
+      shopphone:''
     }
+
+    );
+
+
+
+
     $scope.gohome=function(){
       $ionicPopup.alert({
         title: '提示',
@@ -19,8 +28,13 @@
         okText: '确定',
         okType: 'button-energized'
       });
+      var user = localStorageService.get('user');
+      user.isLogin=false;
+      localStorageService.update('user',user)
       $state.go('login')
 
+
     }
+
   }])
 })()
