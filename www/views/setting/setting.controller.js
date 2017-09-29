@@ -12,11 +12,12 @@
       );
       $state.go('app.home')
     };
-    $scope.shop= localStorageService.get('Shop',{
-      shopphone:''
-    }
+    $scope.$on('$stateChangeSuccess',function () {
+      $scope.shop=localStorageService.get('Shop',{
+        shopphone:''
+      })
 
-    );
+    })
 
 
 

@@ -2,7 +2,7 @@
  * Created by Administrator on 2017/9/19.
  */
 (function () {
-  'use striet';
+  'use strict';
   angular.module('starter.controllers')
     .controller('LoginCtrl', ['$scope', '$ionicPopup', 'localStorageService', '$state',function ($scope, $ionicPopup, localStorageService,$state) {
       var USER_KEY = 'user';

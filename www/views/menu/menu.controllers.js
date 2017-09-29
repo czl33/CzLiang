@@ -12,11 +12,13 @@ angular.module('starter.controllers', [])
     //});
 
     // Form data for the login modal
-    $scope.user=localStorageService.get('Shop',{
-      boss:'',
-      phone:''
+    $scope.$on('$stateChangeSuccess',function () {
+      $scope.user=localStorageService.get('Shop',{
+        boss:'',
+        phone:''
+      })
 
-    });
+    })
     $scope.loginData = {};
 
     // Create the login modal that we will use later
