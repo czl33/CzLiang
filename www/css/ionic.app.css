@@ -9868,3 +9868,7 @@ a.button {
 .active-item {
   background-color: #fff;
   border-left: 4px solid #FF6A3C; }
+
+.product-image {
+  max-width: 80px;
+  max-height: 80px; }

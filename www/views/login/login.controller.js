@@ -16,6 +16,11 @@
           password: '123456',
           isLogin:false
         });
+        var shop=localStorageService.get('Shop',{
+          boss:'小小亮',
+          phone:'13235915159'
+        });
+        localStorageService.update('Shop',shop);
         if (account.username === $scope.user.username && account.password === $scope.user.password) {
           account.isLogin = true;
           localStorageService.update(USER_KEY, account);

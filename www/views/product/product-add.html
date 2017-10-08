@@ -1,8 +1,9 @@
 <ion-view view-title="添加商品">
 <ion-content class="has-footer">
   <div class="list">
-    <div class="item item-icon-right item-thumbnail-left">
-      <img src="views/product/imgs/supplier_icon.png" alt="">
+    <div class="item item-icon-right">
+      <img class="product-image" src="views/product/imgs/supplier_icon.png" alt="" ng-click="showActiveSheet()" ng-if="product.Images.length<3">
+      <img class="product-image" ng-repeat="image in product.Images" ng-src="{{image}}" alt="">
       <i class="icon"><h6>上传图片</h6></i>
     </div>
     <div class="item item-input item-icon-right">
@@ -38,6 +39,11 @@
     <label class="item item-input" for="">
       <span class="input-label">规格</span>
       <input type="text" placeholder="输入商品规格">
+    </label>
+    <label class="item item-input item-icon-right" ng-click="selectSupplier()">
+      <span class="input-label">供应商<span class="energized">*</span></span>
+      <span class="item-note">{{product.Supplier.Name}}</span>
+      <i class="icon ion-chevron-right icon-accessory"></i>
     </label>
 
   </div>
