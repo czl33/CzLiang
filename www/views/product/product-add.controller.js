@@ -100,7 +100,7 @@
           $scope.supplier.Phone='';
           $ionicPopup.show({
             title:'新增供货商',
-            templateUrl:'supplier/supplier-quick-add.html',
+            templateUrl:'views/supplier/supplier-quick-add.html',
             scope:$scope,
             buttons:[{
               text:'取消',

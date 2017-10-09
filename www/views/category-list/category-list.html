@@ -13,7 +13,7 @@
   <ion-content class="light-bg category-content-right">
     <ul class="list">
       <li class="item ">小类别 </li>
-      <li class="item item-icon-right">无类别进入大分类  <i class="icon ion-chevron-right icon-accessory"></i></li>
+      <li class="item item-icon-right">{{showInfo}}<i class="icon ion-chevron-right icon-accessory"></i></li>
       <li class="item item-icon-right"ng-repeat="subCategory in activeCategory.Children" ng-click="selectSubCategory(subCategory)">
         {{subCategory.Name}}
         <i class="icon ion-chevron-right icon-accessory"></i>

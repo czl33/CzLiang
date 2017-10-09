@@ -5,7 +5,14 @@
   'use strict';
   angular.module('starter.controllers')
     .controller('CategoryListCtrl',['$scope','$ionicHistory','$ionicActionSheet','CategoryService',function ($scope,$ionicHistory,$ionicActionSheet,CategoryService){
-     $scope.categories =[
+     $scope.showInfo='无小分类进入大分类'
+      $scope.$on('$stateChangeSuccess',function (event,toState,toParams,fromState,fromParams) {
+        $scope.showInfo='无小分类进入大分类';
+        if (fromState.name=='app.product-list'){
+          $scope.showInfo='全部商品'
+        }
+      })
+      $scope.categories =[
        {
          ID :1,
          Name : '电脑整机',

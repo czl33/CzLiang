@@ -156,7 +156,18 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','n
       }
     })
 
-  .state('app.single', {
+    .state('app.product-list', {
+      url: '/product-list',
+      views: {
+        'menuContent': {
+          templateUrl: 'views/product/product-list.html',
+          controller: 'ProductListCtrl'
+        }
+      }
+    })
+
+
+    .state('app.single', {
     url: '/playlists/:playlistId',
     views: {
       'menuContent': {
