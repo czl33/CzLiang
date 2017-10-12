@@ -9872,3 +9872,25 @@ a.button {
 .product-image {
   max-width: 80px;
   max-height: 80px; }
+
+.toast-container {
+  position: fixed;
+  bottom: 50px;
+  width: 100%;
+  opacity: 0;
+  transition: opacity .8s;
+  z-index: 10; }
+  .toast-container.active {
+    opacity: 1; }
+
+.toast-message {
+  width: 270px;
+  margin: 5px auto;
+  padding: 5px;
+  background-color: #444;
+  text-align: center;
+  color: #fff;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  font-size: 14px; }

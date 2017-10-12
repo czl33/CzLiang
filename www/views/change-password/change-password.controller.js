@@ -11,8 +11,19 @@
       confirmPassword:''
     };
     $scope.save=function () {
+
       var user = localStorageService.get(USER_KEY);
-      if (user.password=== $scope.user.oldPassword){
+      console.log(user);
+      if($scope.user.password != $scope.user.confirmPassword){
+        $ionicPopup.alert(
+          {
+            title: '提示',
+            template: '2次密码输入不一致',
+            okText: '确定',
+            okType: 'button-energized'
+          })
+      }
+      else if (user.password=== $scope.user.oldPassword){
         user.password=$scope.user.password;
         localStorageService.update(USER_KEY,user)
         $state.go('login')
