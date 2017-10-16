@@ -1,4 +1,5 @@
 <ion-view view-title="添加商品">
+  <form name="productForm" novalidate>
 <ion-content class="has-footer">
   <div class="list">
     <div class="item item-icon-right">
@@ -25,8 +26,8 @@
   </div>
   <div class="list" expander-directive>
     <label class="item item-input" for="">
-      <span class="input-label">售价<span class="energized">*</span></span>
-      <input type="text" placeholder="输入商品售价">
+      <span class="input-label">售价<span class="energized" >*</span></span>
+      <input name="price" type="text" placeholder="输入商品售价" ng-model="product.Price" ng-pattern="/^\d+(.\d{1,2})?$/" >
     </label>
     <label class="item item-input" for="">
       <span class="input-label">进价</span>
@@ -49,6 +50,10 @@
   </div>
 
 </ion-content>
+    <div class="toast-container active" ng-messages="productForm.price.$error">
+      <div class="toast-message" ng-message="pattern">货币格式不正确</div>
+    </div>
+    </form>
   <div class="bar bar-footer bar-energized">
     <div class="button-bar">
       <button class="button button-clear">完成</button>
