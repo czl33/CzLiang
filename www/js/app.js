@@ -115,6 +115,16 @@ angular.module('starter', ['ionic','ngMessages','starter.controllers', 'starter.
         }
       }
     })
+
+    .state('app.about', {
+      url: '/about',
+      views:{
+        'menuContent':{
+          templateUrl: 'views/about/about.html',
+          controller: 'AboutCtrl'
+        }
+      }
+    })
     .state('app.shop', {
       url: '/shop',
       views:{

@@ -9,12 +9,12 @@ $scope.title=$stateParams.title;
     $scope.shop=localStorageService.get('Shop',{
       phone:'13235915159',
       createTime:'2017-9-27 17:10',
-      name:'',
+      name:'小亮的店铺',
       jc:'',
       boss:'',
       names:'',
       email:'',
-      shopphone:''
+      shopphone:'13235915159'
     })
     $scope.save=function () {
       localStorageService.update('Shop',$scope.shop);

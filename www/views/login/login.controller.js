@@ -18,7 +18,9 @@
         });
         var shop=localStorageService.get('Shop',{
           boss:'小小亮',
-          phone:'13235915159'
+          phone:'13235915159',
+          shopphone:'13235915159',
+        name:'小亮的店铺'
         });
         localStorageService.update('Shop',shop);
         if (account.username === $scope.user.username && account.password === $scope.user.password) {

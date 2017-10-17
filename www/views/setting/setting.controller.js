@@ -3,7 +3,7 @@
  */
 (function () {
   'use strict';
-  angular.module('starter.controllers').controller('SettingCtrl',['$scope','$ionicHistory','$state','$ionicPopup','localStorageService',function($scope,$ionicHistory,$state,$ionicPopup,localStorageService) {
+  angular.module('starter.controllers').controller('SettingCtrl',['$scope','$ionicHistory','$state','$ionicPopup','localStorageService','$ionicActionSheet',function($scope,$ionicHistory,$state,$ionicPopup,localStorageService,$ionicActionSheet) {
     $scope.goBack=function () {
       $ionicHistory.nextViewOptions(
         {
@@ -18,9 +18,17 @@
       })
 
     })
+$scope.call=function () {
 
+  $ionicActionSheet.show({
+    buttons:[{text:'拨打电话'}],
+    cancelText:'<b>取消</b>'
+    ,buttonClicked:function (mobilePhone) {
+      $window.location.href="tel:"+mobilePhone;
+    }
+  })
 
-
+}
 
     $scope.gohome=function(){
       $ionicPopup.alert({
